@@ -14,6 +14,11 @@
 --   sqlite3 -readonly data/boutique.sqlite < Requetes_TD1/C13.sql
 
 -- Requête à écrire ici :
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+        FROM orders o
+        JOIN product p ON p.product_id = o.product_id
+        WHERE o.date >= '2026-04-01 00:00:00' AND o.date < '2026-05-01 00:00:00'
+          AND o.product_id IN ('a', 'c')
 
 
--- Résultat : revenue_cents =
+-- Résultat : revenue_cents = 107740

@@ -1,7 +1,7 @@
 -- C05 | period
 -- Question : What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-06-01 00:00:00 to 2026-06-02 00:00:00?
 --
--- Auteur          :
+-- Auteur          : Hechmi
 -- Vérifié par     : Aurélien R
 -- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
 --

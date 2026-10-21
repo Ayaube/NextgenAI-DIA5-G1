@@ -2,7 +2,7 @@
 -- Question : What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-03-01 00:00:00 to 2026-06-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?
 --
 -- Auteur          : Jérémie LEROY-DUBIEF
--- Vérifié par     :
+-- Vérifié par     : RASAKARAN Sharusan
 -- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
 --
 -- Conventions (consigne-etudiante-en.md, section 1) :

@@ -2,7 +2,7 @@
 -- Question : What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-05-31 00:00:00 to 2026-06-01 00:00:00?
 --
 -- Auteur          : Ayoub LAMCHICHI
--- Vérifié par     :
+-- Vérifié par     : hechmi Chemli
 -- Vérification    : somme sur les CSV (3*2990 + 4*1250) = 13970.
 
 SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents

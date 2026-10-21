@@ -1,21 +1,101 @@
 case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
-C01,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C01,real,correct,792800,792800,
+C01,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C01,real,correct,792800,792800,Final attempt 1; SQL result matches reference
+C02,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C02,real,correct,590320,590320,Final attempt 1; SQL result matches reference
+C03,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C03,real,correct,936350,936350,Final attempt 1; SQL result matches reference
+C04,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C04,real,correct,2826250,2826250,Final attempt 1; SQL result matches reference
+C05,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C05,real,correct,38480,38480,Final attempt 1; SQL result matches reference
+C06,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C06,real,correct,0,0,Final attempt 1; SQL result matches reference
+C07,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C07,real,correct,13970,13970,Final attempt 1; SQL result matches reference
+C08,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C08,real,correct,605580,605580,Final attempt 1; SQL result matches reference
+C09,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C09,real,correct,487980,487980,Final attempt 1; SQL result matches reference
+C10,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C10,real,correct,558980,558980,Final attempt 1; SQL result matches reference
+C11,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C11,real,correct,446690,446690,Final attempt 1; SQL result matches reference
+C12,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C12,real,correct,1666490,1666490,Final attempt 1; SQL result matches reference
+C13,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C13,real,correct,107740,107740,Final attempt 1; SQL result matches reference
+C14,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C14,real,correct,0,0,Final attempt 1; SQL result matches reference
+C15,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C15,real,correct,168680,168680,Final attempt 1; SQL result matches reference
+C16,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C16,real,correct,376740,376740,Final attempt 1; SQL result matches reference
+C17,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C17,real,correct,258180,258180,Final attempt 1; SQL result matches reference
+C18,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C18,real,correct,62480,62480,Final attempt 1; SQL result matches reference
+C19,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C19,real,correct,1990,1990,Final attempt 1; SQL result matches reference
+C20,groq:openai/gpt-oss-120b,trace_A.csv,groq:openai/gpt-oss-120b:C20,real,correct,1106090,1106090,Final attempt 1; SQL result matches reference
+C01,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C01,real,correct,792800,792800,Value equals the reference. Last attempt 1.
 C02,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C02,real,incorrect,0,590320,SQL filters birth_date > 2025-09-25 and <= 2026-09-25; for age 25 on 2026-09-25 the required range is > 2000-09-25 and <= 2001-09-25.
-C03,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C03,real,correct,936350,936350,
-C04,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C04,real,correct,2826250,2826250,
-C05,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C05,real,correct,38480,38480,
-C06,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C06,real,correct,0,0,
-C07,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C07,real,correct,13970,13970,
-C08,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C08,real,correct,605580,605580,
-C09,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C09,real,correct,487980,487980,
-C10,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C10,real,correct,558980,558980,
-C11,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C11,real,correct,446690,446690,
-C12,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C12,real,correct,1666490,1666490,
-C13,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C13,real,correct,107740,107740,
-C14,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C14,real,correct,0,0,
-C15,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C15,real,correct,168680,168680,
-C16,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C16,real,correct,376740,376740,
-C17,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C17,real,correct,258180,258180,
-C18,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C18,real,correct,62480,62480,
-C19,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C19,real,correct,1990,1990,
-C20,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C20,real,correct,1106090,1106090,
+C03,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C03,real,correct,936350,936350,Value equals the reference. Last attempt 1.
+C04,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C04,real,correct,2826250,2826250,Value equals the reference. Last attempt 1.
+C05,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C05,real,correct,38480,38480,Value equals the reference. Last attempt 1.
+C06,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C06,real,correct,0,0,Value equals the reference. Last attempt 1.
+C07,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C07,real,correct,13970,13970,Value equals the reference. Last attempt 1.
+C08,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C08,real,correct,605580,605580,Value equals the reference. Last attempt 1.
+C09,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C09,real,correct,487980,487980,Value equals the reference. Last attempt 1.
+C10,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C10,real,correct,558980,558980,Value equals the reference. Last attempt 1.
+C11,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C11,real,correct,446690,446690,Value equals the reference. Last attempt 1.
+C12,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C12,real,correct,1666490,1666490,Value equals the reference. Last attempt 1.
+C13,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C13,real,correct,107740,107740,Value equals the reference. Last attempt 1.
+C14,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C14,real,correct,0,0,Value equals the reference. Last attempt 1.
+C15,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C15,real,correct,168680,168680,Value equals the reference. Last attempt 1.
+C16,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C16,real,correct,376740,376740,Value equals the reference. Last attempt 1.
+C17,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C17,real,correct,258180,258180,Value equals the reference. Last attempt 1.
+C18,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C18,real,correct,62480,62480,Value equals the reference. Last attempt 1.
+C19,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C19,real,correct,1990,1990,Value equals the reference. Last attempt 1.
+C20,groq:openai/gpt-oss-20b,traces-B.csv,groq:openai/gpt-oss-20b:C20,real,correct,1106090,1106090,Value equals the reference. Last attempt 1.
+C01,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C01,real,correct,792800,792800,Value equals the reference. Last attempt 1.
+C02,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C02,real,sql_invalid,,590320,"SQL execution failed: syntax_error near ""AS"" because an alias declaration is placed inside an arithmetic expression. HTTP 200; SQL was returned but did not execute. Last attempt 1."
+C03,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C03,real,correct,936350,936350,Value equals the reference. Last attempt 1.
+C04,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C04,real,correct,2826250,2826250,Value equals the reference. Last attempt 1.
+C05,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C05,real,correct,38480,38480,Value equals the reference. Last attempt 1.
+C06,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C06,real,correct,0,0,Value equals the reference. Last attempt 1.
+C07,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C07,real,correct,13970,13970,Value equals the reference. Last attempt 1.
+C08,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C08,real,incorrect,0,605580,The age predicate combines incompatible birthday/year conditions and matches no customers; returned 0 instead of 605580. Last attempt 1.
+C09,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C09,real,incorrect,0,487980,"The query compares the year difference (25 for 2001 births) to a CASE result of 0 or 1, so the age condition does not select the 25-year-olds; returned 0 instead of 487980. Last attempt 1."
+C10,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C10,real,incorrect,548920,558980,"Casting YYYY-MM-DD strings to INTEGER discards month/day, so the age-at-order condition uses year-only boundaries and returns 548920 instead of 558980. Last attempt 1."
+C11,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C11,real,incorrect,0,446690,The date bounds are contradictory: it requires the reference date to be after a birth/order date and the following date/year to be before that same date. No rows match; returned 0 instead of 446690. Last attempt 1.
+C12,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C12,real,correct,1666490,1666490,Value equals the reference. Last attempt 1.
+C13,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C13,real,correct,107740,107740,Value equals the reference. Last attempt 1.
+C14,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C14,real,correct,0,0,Value equals the reference. Last attempt 1.
+C15,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C15,real,correct,168680,168680,Value equals the reference. Last attempt 1.
+C16,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C16,real,correct,376740,376740,Value equals the reference. Last attempt 1.
+C17,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C17,real,incorrect,105840,258180,"The age calculation concatenates month and year as MMYYYY and subtracts those values numerically, which does not correctly compute completed years; returned 105840 instead of 258180. Last attempt 1."
+C18,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C18,real,correct,62480,62480,Value equals the reference. Last attempt 1.
+C19,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C19,real,correct,1990,1990,Value equals the reference. Last attempt 1.
+C20,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C20,real,correct,1106090,1106090,Value equals the reference. Last attempt 1.
+C01,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C01,real,correct,792800,792800,Value equals the reference. Last attempt 1.
+C02,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C02,real,correct,590320,590320,Value equals the reference. Last attempt 1.
+C03,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C03,real,correct,936350,936350,Value equals the reference. Last attempt 1.
+C04,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C04,real,correct,2826250,2826250,Value equals the reference. Last attempt 1.
+C05,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C05,real,correct,38480,38480,Value equals the reference. Last attempt 1.
+C06,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C06,real,correct,0,0,Value equals the reference. Last attempt 1.
+C07,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C07,real,correct,13970,13970,Value equals the reference. Last attempt 1.
+C08,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C08,real,correct,605580,605580,Value equals the reference. Last attempt 1.
+C09,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C09,real,correct,487980,487980,Value equals the reference. Last attempt 1.
+C10,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C10,real,correct,558980,558980,Value equals the reference. Last attempt 1.
+C11,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C11,real,correct,446690,446690,Value equals the reference. Last attempt 1.
+C12,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C12,real,correct,1666490,1666490,Value equals the reference. Last attempt 1.
+C13,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C13,real,correct,107740,107740,Value equals the reference. Last attempt 1.
+C14,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C14,real,correct,0,0,Value equals the reference. Last attempt 1.
+C15,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C15,real,incorrect,0,168680,"Wrong age convention: the WHERE clause compares only month-day and never the birth year (birth mm-dd <= '09-25' AND birth mm-dd > '09-25'), a contradiction that is always false, so SUM is 0. Last attempt 1."
+C16,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C16,real,not_executed,,376740,"Access failure, not a wrong answer: HTTP 429 on both attempts, Groq Free rate limit on output tokens per minute (OTPM limit 1000) for qwen/qwen3.8-27b. No SQL returned, value absent; retry budget (2 attempts) exhausted, cell not rerun. Last attempt 2."
+C17,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C17,real,incorrect,248490,258180,"Off-by-one on the birthday boundary: born in 2001 with mm-dd < '09-25' OR born in 2000 with mm-dd >= '09-25'. Excludes a customer born 2001-09-25 (exactly 25 on the reference date) and includes one born 2000-09-25 (26). First attempt got HTTP 429 (rate limit), retry answered. Last attempt 2."
+C18,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C18,real,not_executed,,62480,"Access failure, not a wrong answer: HTTP 429 on both attempts, Groq Free rate limit on output tokens per minute (OTPM limit 1000) for qwen/qwen3.8-27b. No SQL returned, value absent; retry budget (2 attempts) exhausted, cell not rerun. Last attempt 2."
+C19,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C19,real,incorrect,83580,1990,"Age has no upper bound: compares a year string (strftime('%Y', ...)) with the full date '2026-09-25', always true, so it keeps every customer aged 24 or more instead of exactly 25. First attempt got HTTP 429 (rate limit), retry answered. Last attempt 2."
+C20,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C20,real,correct,1106090,1106090,"Value equals the reference. First attempt got HTTP 429 (rate limit), retry answered. Last attempt 2."
+C01,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C01,real,correct,792800,792800,Value equals the reference. Last attempt 1.
+C02,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C02,real,correct,590320,590320,Value equals the reference. Last attempt 1.
+C03,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C03,real,correct,936350,936350,Value equals the reference. Last attempt 1.
+C04,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C04,real,correct,2826250,2826250,Value equals the reference. Last attempt 1.
+C05,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C05,real,correct,38480,38480,Value equals the reference. Last attempt 1.
+C06,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C06,real,correct,0,0,Value equals the reference. Last attempt 1.
+C07,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C07,real,correct,13970,13970,Value equals the reference. Last attempt 1.
+C08,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C08,real,correct,605580,605580,Value equals the reference. Last attempt 1.
+C09,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C09,real,incorrect,134660,487980,Age convention broken: SQL bounds birth_date between '2001-09-26' and '2026-09-26' and combines two contradictory month/day tests (<= and > compared to FALSE); it is not the completed age 25 on 2026-09-26 (birth_date > '2000-09-26' AND <= '2001-09-26'); value 134660 < reference 487980.
+C10,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C10,real,correct,558980,558980,Value equals the reference. Last attempt 1.
+C11,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C11,real,correct,446690,446690,Value equals the reference. Last attempt 1.
+C12,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C12,real,correct,1666490,1666490,Value equals the reference. Last attempt 1.
+C13,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C13,real,correct,107740,107740,Value equals the reference. Last attempt 1.
+C14,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C14,real,correct,0,0,Value equals the reference. Last attempt 1.
+C15,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C15,real,incorrect,138920,168680,"Age convention broken: SQL keeps year difference = 25 AND birthday already passed, so customers born in 2000 whose birthday falls after 09-25 (year difference 26, completed age 25) are excluded; value 138920 < reference 168680."
+C16,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C16,real,incorrect,211260,376740,"Age convention broken: SQL keeps year difference = 25 AND birthday already passed, so customers born in 2000 whose birthday falls after 09-25 (year difference 26, completed age 25) are excluded; value 211260 < reference 376740."
+C17,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C17,real,incorrect,152730,258180,"Age convention broken: year difference = 25 AND birth month/day <= 09-25 (hard-coded), so customers born in 2000 after 09-25 (completed age 25) are excluded; value 152730 < reference 258180."
+C18,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C18,real,incorrect,39580,62480,"Age-at-order convention broken: year difference (order year - birth year) = 25 AND birthday passed at the order date, so customers whose 26th-year birthday had not yet come at the order are excluded; value 39580 < reference 62480."
+C19,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C19,real,sql_invalid,,1990,"Invalid SQL, sandbox error 'near "")"": syntax error': second age block writes CAST(substr('2026-09-25', 1, 4) without AS INTEGER; the age logic also approximates years as 365 days and months as 30 days."
+C20,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C20,real,correct,1106090,1106090,Value equals the reference. Last attempt 1.

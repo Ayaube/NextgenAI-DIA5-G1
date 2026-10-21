@@ -2,7 +2,7 @@
 -- Question : What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-06-01 00:00:00 to 2026-06-02 00:00:00?
 --
 -- Auteur          :
--- Vérifié par     :
+-- Vérifié par     : Aurélien R
 -- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
 --
 -- Conventions (consigne-etudiante-en.md, section 1) :

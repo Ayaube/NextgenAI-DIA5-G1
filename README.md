@@ -60,4 +60,4 @@ python skeleton-multi-llm-en.py --run --models groq:qwen/qwen3.8-27b --state sta
 
 ## Status
 
-TD 1: references, five lots and both summaries done. Open: independent checks still missing for C07 to C09 and C13 to C15; `reports/td1.md`.
+TD 1: twenty references written and independently checked by another member, five lots and both summaries done. Open: `reports/td1.md`.

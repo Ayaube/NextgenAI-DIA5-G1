@@ -1,0 +1,21 @@
+case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
+C01,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C01,real,correct,792800,792800,Value equals the reference. Last attempt 1.
+C02,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C02,real,sql_invalid,,590320,"SQL execution failed: syntax_error near ""AS"" because an alias declaration is placed inside an arithmetic expression. HTTP 200; SQL was returned but did not execute. Last attempt 1."
+C03,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C03,real,correct,936350,936350,Value equals the reference. Last attempt 1.
+C04,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C04,real,correct,2826250,2826250,Value equals the reference. Last attempt 1.
+C05,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C05,real,correct,38480,38480,Value equals the reference. Last attempt 1.
+C06,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C06,real,correct,0,0,Value equals the reference. Last attempt 1.
+C07,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C07,real,correct,13970,13970,Value equals the reference. Last attempt 1.
+C08,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C08,real,incorrect,0,605580,The age predicate combines incompatible birthday/year conditions and matches no customers; returned 0 instead of 605580. Last attempt 1.
+C09,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C09,real,incorrect,0,487980,"The query compares the year difference (25 for 2001 births) to a CASE result of 0 or 1, so the age condition does not select the 25-year-olds; returned 0 instead of 487980. Last attempt 1."
+C10,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C10,real,incorrect,548920,558980,"Casting YYYY-MM-DD strings to INTEGER discards month/day, so the age-at-order condition uses year-only boundaries and returns 548920 instead of 558980. Last attempt 1."
+C11,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C11,real,incorrect,0,446690,The date bounds are contradictory: it requires the reference date to be after a birth/order date and the following date/year to be before that same date. No rows match; returned 0 instead of 446690. Last attempt 1.
+C12,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C12,real,correct,1666490,1666490,Value equals the reference. Last attempt 1.
+C13,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C13,real,correct,107740,107740,Value equals the reference. Last attempt 1.
+C14,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C14,real,correct,0,0,Value equals the reference. Last attempt 1.
+C15,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C15,real,correct,168680,168680,Value equals the reference. Last attempt 1.
+C16,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C16,real,correct,376740,376740,Value equals the reference. Last attempt 1.
+C17,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C17,real,incorrect,105840,258180,"The age calculation concatenates month and year as MMYYYY and subtracts those values numerically, which does not correctly compute completed years; returned 105840 instead of 258180. Last attempt 1."
+C18,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C18,real,correct,62480,62480,Value equals the reference. Last attempt 1.
+C19,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C19,real,correct,1990,1990,Value equals the reference. Last attempt 1.
+C20,openrouter:cohere/north-mini-code:free,traces-C.csv,openrouter:cohere/north-mini-code:free:C20,real,correct,1106090,1106090,Value equals the reference. Last attempt 1.

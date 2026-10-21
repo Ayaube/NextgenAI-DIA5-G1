@@ -15,5 +15,11 @@
 
 -- Requête à écrire ici :
 
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders AS o
+JOIN product AS p ON o.product_id = p.product_id
+JOIN customers AS c ON o.customer_id = c.customer_id
+WHERE c.birth_date > '2000-09-25'
+  AND c.birth_date <= '2001-09-25';
 
--- Résultat : revenue_cents =
+-- Résultat : revenue_cents = 590 320 

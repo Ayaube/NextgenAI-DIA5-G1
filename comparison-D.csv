@@ -1,0 +1,21 @@
+case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
+C01,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C01,real,correct,792800,792800,Value equals the reference. Last attempt 1.
+C02,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C02,real,correct,590320,590320,Value equals the reference. Last attempt 1.
+C03,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C03,real,correct,936350,936350,Value equals the reference. Last attempt 1.
+C04,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C04,real,correct,2826250,2826250,Value equals the reference. Last attempt 1.
+C05,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C05,real,correct,38480,38480,Value equals the reference. Last attempt 1.
+C06,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C06,real,correct,0,0,Value equals the reference. Last attempt 1.
+C07,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C07,real,correct,13970,13970,Value equals the reference. Last attempt 1.
+C08,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C08,real,correct,605580,605580,Value equals the reference. Last attempt 1.
+C09,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C09,real,correct,487980,487980,Value equals the reference. Last attempt 1.
+C10,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C10,real,correct,558980,558980,Value equals the reference. Last attempt 1.
+C11,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C11,real,correct,446690,446690,Value equals the reference. Last attempt 1.
+C12,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C12,real,correct,1666490,1666490,Value equals the reference. Last attempt 1.
+C13,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C13,real,correct,107740,107740,Value equals the reference. Last attempt 1.
+C14,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C14,real,correct,0,0,Value equals the reference. Last attempt 1.
+C15,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C15,real,incorrect,0,168680,"Wrong age convention: the WHERE clause compares only month-day and never the birth year (birth mm-dd <= '09-25' AND birth mm-dd > '09-25'), a contradiction that is always false, so SUM is 0. Last attempt 1."
+C16,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C16,real,not_executed,,376740,"Access failure, not a wrong answer: HTTP 429 on both attempts, Groq Free rate limit on output tokens per minute (OTPM limit 1000) for qwen/qwen3.8-27b. No SQL returned, value absent; retry budget (2 attempts) exhausted, cell not rerun. Last attempt 2."
+C17,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C17,real,incorrect,248490,258180,"Off-by-one on the birthday boundary: born in 2001 with mm-dd < '09-25' OR born in 2000 with mm-dd >= '09-25'. Excludes a customer born 2001-09-25 (exactly 25 on the reference date) and includes one born 2000-09-25 (26). First attempt got HTTP 429 (rate limit), retry answered. Last attempt 2."
+C18,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C18,real,not_executed,,62480,"Access failure, not a wrong answer: HTTP 429 on both attempts, Groq Free rate limit on output tokens per minute (OTPM limit 1000) for qwen/qwen3.8-27b. No SQL returned, value absent; retry budget (2 attempts) exhausted, cell not rerun. Last attempt 2."
+C19,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C19,real,incorrect,83580,1990,"Age has no upper bound: compares a year string (strftime('%Y', ...)) with the full date '2026-09-25', always true, so it keeps every customer aged 24 or more instead of exactly 25. First attempt got HTTP 429 (rate limit), retry answered. Last attempt 2."
+C20,groq:qwen/qwen3.8-27b,traces-D.csv,groq:qwen/qwen3.8-27b:C20,real,correct,1106090,1106090,"Value equals the reference. First attempt got HTTP 429 (rate limit), retry answered. Last attempt 2."

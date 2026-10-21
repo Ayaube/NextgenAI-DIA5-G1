@@ -1,7 +1,7 @@
 -- C03 | product list
 -- Question : What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00?
 --
--- Auteur          :
+-- Auteur          : Aurélien R
 -- Vérifié par     :
 -- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
 --

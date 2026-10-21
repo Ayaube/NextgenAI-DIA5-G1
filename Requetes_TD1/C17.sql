@@ -1,8 +1,8 @@
 -- C17 | period + age on a reference date + product list
 -- Question : What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00 by customers who are exactly 25 years old on the reference date 2026-09-25?
 --
--- Auteur          : Aurélien GL
--- Vérifié par     : Maxence
+-- Auteur          : Aurélien Guillout-Lacomblez
+-- Vérifié par     : Maxence Tessier
 -- Vérification    : calcul indépendant sur customers.csv, orders.csv et product.csv
 --
 -- Conventions (consigne-etudiante-en.md, section 1) :

@@ -1,8 +1,8 @@
 -- C18 | period + age at the time of the order
 -- Question : What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-05-01 00:00:00 to 2026-06-01 00:00:00 by customers who were exactly 25 years old at the time of the order?
 --
--- Auteur          : Aurélien GL
--- Vérifié par     : Maxence
+-- Auteur          : Aurélien Guillout-Lacomblez
+-- Vérifié par     : Maxence Tessier
 -- Vérification    : calcul indépendant sur customers.csv, orders.csv et product.csv
 --
 -- Conventions (consigne-etudiante-en.md, section 1) :

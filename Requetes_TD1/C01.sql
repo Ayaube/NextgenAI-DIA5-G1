@@ -1,8 +1,8 @@
 -- C01 | period
 -- Question : What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-03-01 00:00:00 to 2026-06-01 00:00:00?
 --
--- Auteur          : Aurélien R
--- Vérifié par     : Jérémie LD
+-- Auteur          : Aurelien Roche
+-- Vérifié par     : Jérémie LEROY-DUBIEF
 -- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
 --
 -- Conventions (consigne-etudiante-en.md, section 1) :

@@ -2,7 +2,8 @@
 
 Reads the raw traces of each lot (one row per attempt, written by skeleton-multi-llm-en.py)
 and the per-lot comparison files written by the operators, then writes:
-  - traces-td1.csv                    all attempts of all lots, one header
+  - reference-td1.csv                 written_by / checked_by columns from Requetes_TD1/*.sql
+  - traces-td1.csv, traces-td1.jsonl  all attempts of all lots, one header / the merged state files
   - model-question-comparison-en.csv  one final row per model/question (last attempt wins)
   - comparison-pivot.md               models x questions view of that CSV, for the plenary
   - five-model-summary-en.csv         the five models: portfolio index/prices, access, results by family
@@ -13,6 +14,7 @@ operators' comparison files. A lot whose trace file is absent is reported as mis
 import csv
 import json
 import os
+import re
 from collections import OrderedDict
 
 # Lot -> (raw trace file, state file, operator's comparison file). Names as pushed by each operator.
@@ -53,7 +55,29 @@ questions = json.load(open("questions-td1.json", encoding="utf-8"))["questions"]
 CASES = [q["id"] for q in questions]
 TYPES = {q["id"]: q["type"] for q in questions}
 
-# 1. traces-td1.csv: every attempt of every lot present.
+# 0. reference-td1.csv: written_by / checked_by copied from the headers of Requetes_TD1/Cxx.sql.
+#    The query and the value are never touched here.
+def sql_header(case, label):
+    path = os.path.join("Requetes_TD1", f"{case}.sql")
+    if not os.path.exists(path):
+        return ""
+    match = re.search(rf"^-- {label}\s*:(.*)$", open(path, encoding="utf-8").read(), re.M)
+    return match.group(1).strip() if match else ""
+
+
+references = read_csv("reference-td1.csv")
+write_csv("reference-td1.csv", ["case_id", "sql", "revenue_cents", "written_by", "checked_by"],
+          [[r["case_id"], r["sql"], r["revenue_cents"], sql_header(r["case_id"], "Auteur"),
+            sql_header(r["case_id"], "Vérifié par")] for r in references])
+
+# 1. traces-td1.csv and traces-td1.jsonl: every attempt of every lot present.
+with open("traces-td1.jsonl", "w", encoding="utf-8") as merged:
+    for lot, (_, state_file, _) in LOTS.items():
+        if os.path.exists(state_file):
+            for line in open(state_file, encoding="utf-8"):
+                if line.strip():
+                    merged.write(line if line.endswith("\n") else line + "\n")
+
 all_rows, header, present = [], None, OrderedDict()
 for lot, (trace_file, _, _) in LOTS.items():
     if not os.path.exists(trace_file):

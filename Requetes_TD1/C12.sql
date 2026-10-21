@@ -1,8 +1,8 @@
 -- C12 | product list
 -- Question : What is the total revenue excluding VAT, in euro cents, of products a, b and c only, over all orders?
 --
--- Auteur          : Sharusan Rasakaran
--- Vérifié par     : Ayoub
+-- Auteur          : RASAKARAN Sharusan
+-- Vérifié par     : Ayoub LAMCHICHI
 -- Vérification    : calcul indépendant en Python pur sur les CSV (1666490)
 
 -- Exécution (depuis la racine du repo) :

@@ -2,7 +2,7 @@
 -- Question : What is the total revenue excluding VAT, in euro cents, of the orders placed by customers who were exactly 25 years old at the time of the order?
 --
 -- Auteur          : Sharusan Rasakaran
--- Vérifié par     : <nom>
+-- Vérifié par     : Ayoub
 -- Vérification    : calcul indépendant en Python pur sur les CSV (data/orders.csv, customers.csv, product.csv),
 --                   sans SQL
 --

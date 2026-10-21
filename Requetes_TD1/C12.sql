@@ -1,19 +1,17 @@
 -- C12 | product list
 -- Question : What is the total revenue excluding VAT, in euro cents, of products a, b and c only, over all orders?
 --
--- Auteur          :
--- Vérifié par     :
--- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
---
--- Conventions (consigne-etudiante-en.md, section 1) :
---   période    : date >= début AND date < fin
---   âge        : âge révolu au mois et au jour, jamais la seule différence d'années
---   montant    : SUM(quantity_product * price), centimes HT, 0 si rien (COALESCE)
---   sortie     : une ligne, une colonne nommée revenue_cents
+-- Auteur          : Sharusan Rasakaran
+-- Vérifié par     : <nom>
+-- Vérification    : calcul indépendant en Python pur sur les CSV (1666490)
+
 -- Exécution (depuis la racine du repo) :
 --   sqlite3 -readonly data/boutique.sqlite < Requetes_TD1/C12.sql
 
--- Requête à écrire ici :
 
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders o
+JOIN product p ON p.product_id = o.product_id
+WHERE o.product_id IN ('a','b','c');
 
--- Résultat : revenue_cents =
+-- Résultat : revenue_cents = 1666490

@@ -1,9 +1,9 @@
 -- C18 | period + age at the time of the order
 -- Question : What is the revenue excluding VAT, in euro cents, of the orders placed from 2026-05-01 00:00:00 to 2026-06-01 00:00:00 by customers who were exactly 25 years old at the time of the order?
 --
--- Auteur          :
+-- Auteur          : Aurélien GL
 -- Vérifié par     :
--- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
+-- Vérification    : calcul indépendant sur customers.csv, orders.csv et product.csv
 --
 -- Conventions (consigne-etudiante-en.md, section 1) :
 --   période    : date >= début AND date < fin
@@ -14,6 +14,16 @@
 --   sqlite3 -readonly data/boutique.sqlite < Requetes_TD1/C18.sql
 
 -- Requête à écrire ici :
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders AS o
+JOIN customers AS c ON c.customer_id = o.customer_id
+JOIN product AS p ON p.product_id = o.product_id
+WHERE o.date >= '2026-05-01 00:00:00'
+  AND o.date < '2026-06-01 00:00:00'
+  AND (
+    CAST(strftime('%Y', o.date) AS INTEGER)
+    - CAST(strftime('%Y', c.birth_date) AS INTEGER)
+    - (strftime('%m-%d', o.date) < strftime('%m-%d', c.birth_date))
+  ) = 25;
 
-
--- Résultat : revenue_cents =
+-- Résultat : revenue_cents = 62480

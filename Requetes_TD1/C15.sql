@@ -21,6 +21,6 @@ SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
         WHERE o.date >= '2026-03-01 00:00:00' AND o.date < '2026-06-01 00:00:00'
           AND (CAST(strftime('%Y', '2026-09-25') AS INTEGER)
                - CAST(strftime('%Y', c.birth_date) AS INTEGER)
-               - (strftime('%m-%d', '2026-09-25') < strftime('%m-%d', c.birth_date))) = 25
+               - (strftime('%m-%d', '2026-09-25') < strftime('%m-%d', c.birth_date))) = 25;
 
 -- Résultat : revenue_cents = 168680

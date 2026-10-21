@@ -1,7 +1,7 @@
 -- C03 | product list
 -- Question : What is the revenue excluding VAT, in euro cents, of products a, b and c only, for orders placed from 2026-01-01 00:00:00 to 2026-07-01 00:00:00?
 --
--- Auteur          :
+-- Auteur          : Aurélien R
 -- Vérifié par     :
 -- Vérification    : (méthode indépendante : autre requête, calcul sur les CSV...)
 --
@@ -15,5 +15,12 @@
 
 -- Requête à écrire ici :
 
+SELECT COALESCE(SUM(o.quantity_product * p.price), 0) AS revenue_cents
+FROM orders AS o
+JOIN product AS p ON o.product_id = p.product_id
+WHERE o.product_id IN ('a', 'b', 'c')
+  AND o.date >= '2026-01-01 00:00:00'
+  AND o.date < '2026-07-01 00:00:00';
 
--- Résultat : revenue_cents =
+
+-- Résultat : revenue_cents = 936 350

@@ -27,6 +27,6 @@ python consolider_td1.py
 
 TD 1: twenty checked references, five model lots, comparison and five-model summary.
 
-## Open blocks
+## Session report
 
-`reports/td1.md`.
+[reports/td1.md](reports/td1.md).

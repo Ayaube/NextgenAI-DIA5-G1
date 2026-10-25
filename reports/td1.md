@@ -28,8 +28,8 @@ This batch contains only real calls (`nature = real` on all 105 rows of [traces-
 
 By family, from [five-model-summary-en.csv](../five-model-summary-en.csv):
 
-- Period (C01, C04, C05, C06, C07, C20): 6/6 on all five models, including the empty windows C06 and C14's sibling product window, whose reference is 0.
-- Product list (C03, C12, C13, C14): 4/4 on all five models.
+- Period (C01, C04, C05, C06, C07, C20): 6/6 on all five models, including the empty period C06, whose reference is 0.
+- Product list (C03, C12, C13, C14): 4/4 on all five models, including the empty period with a product filter in C14.
 - Age (C02, C08, C09, C10, C11): 5/5 for A and D, 4/5 for B and E, 0/5 for C.
 - Combined (C15–C19): 5/5 for A and B, 4/5 for C, 0/5 for E. D has 0 correct, 3 incorrect and 2 not executed.
 
@@ -51,11 +51,11 @@ Causes below are the `explanation` of the final row in [model-question-compariso
 
 **Access refused, not a wrong answer.** D, C16 and C18. Both attempts returned HTTP 429, Groq Free output-tokens-per-minute limit (1000) on `qwen/qwen3.8-27b`. No SQL and no value. The retry budget is one extra attempt, so the cell stays `not_executed`. The same 429 hit the first attempt of C17, C19 and C20; the retry of those three cells did return SQL, and that SQL is what the comparison judges. Detail is on the 429 rows of [traces-D.csv](../traces-D.csv).
 
-Hypothesis for this batch only: a model that implements the anniversary test (year difference, then one day of correction) passes the age questions. A model that uses the year difference alone, or that places the 25-year window on the wrong side of the reference date, fails them. Combining that test with a period or a product list is where D and E lose the questions they still passed in isolation. One call at temperature 0 is not a rate.
+Completed age is the difference between the reference year and the birth year, minus one year if the birthday has not yet occurred on the reference date. For age at order time, the reference date is the date of that order. The observed age errors show why checking the month and day is necessary. Combining age with a period or a product list is where D and E fail questions while passing other cases in isolation. This single batch does not establish a general success rate.
 
 ## Portfolio reading
 
-For this batch, `gpt-oss-120b` is enough for every family. Its kit index is 11.6 (28 September 2026). The documented paid route of the same model is OpenRouter pay-per-token, 0.15 USD per million input tokens and 0.60 output. The call itself used Groq Free, so `cost_native` is empty on all 65 Groq rows. OpenRouter filled `cost_native` on all 40 of its rows.
+In this batch, `gpt-oss-120b` answered all twenty questions correctly. Its kit index is 11.6 (28 September 2026). The documented paid route of the same model is OpenRouter pay-per-token, 0.15 USD per million input tokens and 0.60 output. The calls used Groq Free. Native cost measurements are absent on all 65 Groq rows and remain empty; a free access route alone does not establish a measured zero. OpenRouter filled `cost_native` on all 40 of its rows.
 
 `gpt-oss-20b` (index 9) misses only C02. The kit portfolio has no paid route for this exact model id. `qwen/qwen3.8-27b` (index 33.7) matches the 120b model on period, age and product, then fails the combined block, and the free tier did not finish two of those cells. Cohere North and Dots are absent from the portfolio file, so their index and paid price are N/A. Both are usable for period and product questions and unreliable for completed age.
 
@@ -86,3 +86,9 @@ Names as written in `Requetes_TD1/` and on the commits that added each lot.
 ## Next steps
 
 TD 2 reads these traces and adds the vote in `skeleton-multi-llm-en.py` (`atelier-vote.py` is the workshop version). No new network batch unless the instructor assigns one. Replayed rows, if a pilot trace is used later, stay `nature = replay` and out of the real counts.
+
+## AI assistance and verification
+
+Aurélien Guillout-Lacomblez used Codex to help draft C16–C18, populate the model B comparison from its saved traces, understand the protocol, and review the hand-in. On 25 October, Codex also helped correct the README, this report and Git line-ending settings. The relevant user requests and the scope of assistance are retained in [ai-assistance.md](../ai-assistance.md).
+
+The C16–C18 amounts were obtained by executing the SQL on the supplied read-only database and checked independently by a calculation on the supplied CSVs. Model B's comparison was checked against `traces-B.csv`, including the incorrect C02 birth-date filter. The final review executed the twenty reference queries, rechecked returned SQL and prompt fingerprints, and compared the merged CSV/JSONL with the saved attempts. The reference amounts and recorded model outputs were not invented by the assistant. The group remains responsible for explaining the queries, checks and conclusions.

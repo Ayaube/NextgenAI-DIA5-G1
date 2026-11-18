@@ -57,6 +57,15 @@ All five cost 0 on the free routes used. What differs is the **quota** (Groq Fre
 | F3 product list | C03, C12, C13, C14 | all five (4/4 each) | GPT-OSS 20B via Groq Free (4/4; smallest model, keeps the 120B and Qwen quotas for F2 and F4) | Use 20B alone: admissible because 20B scored 4/4 on the family. Display the result if the SQL query runs and returns an integer amount in cents. | Require a 2-of-3 vote with GPT-OSS 120B, Cohere and Qwen (fixed panel, all 4/4 on F3). Display the amount only if two models agree to the cent, otherwise abstain. | Compare with an independently validated SQL reference. Release payment only on an exact match in cents. | Use eligible prepaid capacity if available, then try Dots or Cohere via OpenRouter (4/4 each, different provider, so a Groq rate limit does not block them), then 120B or Qwen via Groq Free. If no free route is available, wait for quota refill if the deadline allows. Otherwise use paid 120B via OpenRouter within budget, or abstain. |
 | F4 combinations | C15–C19 | 120b and 20b (5/5 each) | GPT-OSS 120B via Groq Free | Use 120B alone. Display the result if the SQL query runs and returns an integer amount in cents. | Require a 2-of-3 vote with GPT-OSS 120B, Cohere and Qwen. Display the amount only if two models agree to the cent. | Compare with an independently validated SQL reference. Release payment only on an exact match in cents. | Use eligible prepaid capacity if available, then try GPT-OSS 20B via Groq Free (5/5). Keep the same checks, with 20B replacing 120B in the vote. If no free route is available, wait for quota refill if the deadline allows. Otherwise use paid 120B via OpenRouter within budget, or abstain and request review. |
 
+
+### Waiting, retries and deadlines
+
+Try the next available eligible free route immediately, in the order specified for the question family. Skip routes covered by the same known quota block. If all eligible free routes are temporarily unavailable and the request can wait, defer until the earliest announced refill. If the provider gives no refill time, retry after 60 seconds. Recheck availability at wake-up.
+
+Allow at most 10 free model calls per request, including the first call, fallback calls and calls to panel members. Local availability checks do not count. Retry only temporary access failures. Each panel member has one vote, even after a retry.
+
+Stop waiting when the next attempt would leave too little time to complete the required check. For an urgent request, skip waiting entirely. Use paid GPT-OSS 120B via OpenRouter only if the remaining budget and deadline cover the required work. Otherwise abstain. Keep the original checking rule when switching routes.
+
 For "if unavailable", use the order of lecture 2: capacity already paid for (subscription) → free model up to the request → **wait for the refill if the request can wait** → paid route within the budget → **abstention** or a person.
 
 ## 4. Simulator

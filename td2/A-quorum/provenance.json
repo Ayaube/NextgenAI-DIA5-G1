@@ -1,0 +1,934 @@
+{
+  "github_commit_for_E": "af26f14022229f3bbfc2c095e9976b426c9fc0d9",
+  "github_source_E": "https://github.com/Ayaube/NextgenAI-DIA5-G1/blob/af26f14022229f3bbfc2c095e9976b426c9fc0d9/traces-E.csv",
+  "sources": [
+    {
+      "file": "trace_A.csv",
+      "sha256": "819c70fee4ae7dff8a39c0902dbeeb804a0d66b07ac8968723dd13ac9970f292",
+      "rows": 20
+    },
+    {
+      "file": "traces-B.csv",
+      "sha256": "f3e712e32b5f1cc0c6cb23a0ca7cfe37008fc78c6ad2c9b389386b3cc4480cf5",
+      "rows": 20
+    },
+    {
+      "file": "traces-C.csv",
+      "sha256": "54883b060a5a828b26fa4afea1802156fccbc50e82f456d121d23bde38b8ef93",
+      "rows": 20
+    },
+    {
+      "file": "traces-D.csv",
+      "sha256": "100c18f891f9f1b7e8e05edbbd761ff8ae5d81589fcefc16b299796d19cebe22",
+      "rows": 25
+    },
+    {
+      "file": "traces-E.csv",
+      "sha256": "75d2488e95b751cf07baa055d27b0ced1c2344574cf74b06b91e1f617783f1d9",
+      "rows": 20
+    }
+  ],
+  "method": "last attempt per provider/model/case after stable UTC sort; no new API call",
+  "selected_cells": {
+    "A:C01": {
+      "source": "trace_A.csv",
+      "csv_record": 1,
+      "date_utc": "2026-10-21 13:45:15",
+      "value": "792800",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C02": {
+      "source": "trace_A.csv",
+      "csv_record": 2,
+      "date_utc": "2026-10-21 13:45:20",
+      "value": "590320",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C03": {
+      "source": "trace_A.csv",
+      "csv_record": 3,
+      "date_utc": "2026-10-21 13:45:24",
+      "value": "936350",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C04": {
+      "source": "trace_A.csv",
+      "csv_record": 4,
+      "date_utc": "2026-10-21 13:45:28",
+      "value": "2826250",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C05": {
+      "source": "trace_A.csv",
+      "csv_record": 5,
+      "date_utc": "2026-10-21 13:45:31",
+      "value": "38480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C06": {
+      "source": "trace_A.csv",
+      "csv_record": 6,
+      "date_utc": "2026-10-21 13:45:35",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C07": {
+      "source": "trace_A.csv",
+      "csv_record": 7,
+      "date_utc": "2026-10-21 13:45:39",
+      "value": "13970",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C08": {
+      "source": "trace_A.csv",
+      "csv_record": 8,
+      "date_utc": "2026-10-21 13:45:43",
+      "value": "605580",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C09": {
+      "source": "trace_A.csv",
+      "csv_record": 9,
+      "date_utc": "2026-10-21 13:45:48",
+      "value": "487980",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C10": {
+      "source": "trace_A.csv",
+      "csv_record": 10,
+      "date_utc": "2026-10-21 13:45:52",
+      "value": "558980",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C11": {
+      "source": "trace_A.csv",
+      "csv_record": 11,
+      "date_utc": "2026-10-21 13:45:56",
+      "value": "446690",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C12": {
+      "source": "trace_A.csv",
+      "csv_record": 12,
+      "date_utc": "2026-10-21 13:46:00",
+      "value": "1666490",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C13": {
+      "source": "trace_A.csv",
+      "csv_record": 13,
+      "date_utc": "2026-10-21 13:46:04",
+      "value": "107740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C14": {
+      "source": "trace_A.csv",
+      "csv_record": 14,
+      "date_utc": "2026-10-21 13:46:07",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C15": {
+      "source": "trace_A.csv",
+      "csv_record": 15,
+      "date_utc": "2026-10-21 13:46:12",
+      "value": "168680",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C16": {
+      "source": "trace_A.csv",
+      "csv_record": 16,
+      "date_utc": "2026-10-21 13:46:17",
+      "value": "376740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C17": {
+      "source": "trace_A.csv",
+      "csv_record": 17,
+      "date_utc": "2026-10-21 13:46:20",
+      "value": "258180",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C18": {
+      "source": "trace_A.csv",
+      "csv_record": 18,
+      "date_utc": "2026-10-21 13:46:25",
+      "value": "62480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C19": {
+      "source": "trace_A.csv",
+      "csv_record": 19,
+      "date_utc": "2026-10-21 13:46:29",
+      "value": "1990",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "A:C20": {
+      "source": "trace_A.csv",
+      "csv_record": 20,
+      "date_utc": "2026-10-21 13:46:33",
+      "value": "1106090",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C01": {
+      "source": "traces-B.csv",
+      "csv_record": 1,
+      "date_utc": "2026-10-21 13:30:14",
+      "value": "792800",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C02": {
+      "source": "traces-B.csv",
+      "csv_record": 2,
+      "date_utc": "2026-10-21 13:30:20",
+      "value": "0",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C03": {
+      "source": "traces-B.csv",
+      "csv_record": 3,
+      "date_utc": "2026-10-21 13:30:23",
+      "value": "936350",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C04": {
+      "source": "traces-B.csv",
+      "csv_record": 4,
+      "date_utc": "2026-10-21 13:30:27",
+      "value": "2826250",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C05": {
+      "source": "traces-B.csv",
+      "csv_record": 5,
+      "date_utc": "2026-10-21 13:30:30",
+      "value": "38480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C06": {
+      "source": "traces-B.csv",
+      "csv_record": 6,
+      "date_utc": "2026-10-21 13:30:34",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C07": {
+      "source": "traces-B.csv",
+      "csv_record": 7,
+      "date_utc": "2026-10-21 13:30:38",
+      "value": "13970",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C08": {
+      "source": "traces-B.csv",
+      "csv_record": 8,
+      "date_utc": "2026-10-21 13:30:43",
+      "value": "605580",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C09": {
+      "source": "traces-B.csv",
+      "csv_record": 9,
+      "date_utc": "2026-10-21 13:30:47",
+      "value": "487980",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C10": {
+      "source": "traces-B.csv",
+      "csv_record": 10,
+      "date_utc": "2026-10-21 13:30:52",
+      "value": "558980",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C11": {
+      "source": "traces-B.csv",
+      "csv_record": 11,
+      "date_utc": "2026-10-21 13:30:57",
+      "value": "446690",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C12": {
+      "source": "traces-B.csv",
+      "csv_record": 12,
+      "date_utc": "2026-10-21 13:31:02",
+      "value": "1666490",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C13": {
+      "source": "traces-B.csv",
+      "csv_record": 13,
+      "date_utc": "2026-10-21 13:31:05",
+      "value": "107740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C14": {
+      "source": "traces-B.csv",
+      "csv_record": 14,
+      "date_utc": "2026-10-21 13:31:09",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C15": {
+      "source": "traces-B.csv",
+      "csv_record": 15,
+      "date_utc": "2026-10-21 13:31:14",
+      "value": "168680",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C16": {
+      "source": "traces-B.csv",
+      "csv_record": 16,
+      "date_utc": "2026-10-21 13:31:18",
+      "value": "376740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C17": {
+      "source": "traces-B.csv",
+      "csv_record": 17,
+      "date_utc": "2026-10-21 13:31:22",
+      "value": "258180",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C18": {
+      "source": "traces-B.csv",
+      "csv_record": 18,
+      "date_utc": "2026-10-21 13:31:27",
+      "value": "62480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C19": {
+      "source": "traces-B.csv",
+      "csv_record": 19,
+      "date_utc": "2026-10-21 13:31:31",
+      "value": "1990",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "B:C20": {
+      "source": "traces-B.csv",
+      "csv_record": 20,
+      "date_utc": "2026-10-21 13:31:35",
+      "value": "1106090",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C01": {
+      "source": "traces-C.csv",
+      "csv_record": 1,
+      "date_utc": "2026-10-21 13:57:29",
+      "value": "792800",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C02": {
+      "source": "traces-C.csv",
+      "csv_record": 2,
+      "date_utc": "2026-10-21 13:57:34",
+      "value": "",
+      "verdict": "sql_invalid",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C03": {
+      "source": "traces-C.csv",
+      "csv_record": 3,
+      "date_utc": "2026-10-21 13:57:40",
+      "value": "936350",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C04": {
+      "source": "traces-C.csv",
+      "csv_record": 4,
+      "date_utc": "2026-10-21 13:57:44",
+      "value": "2826250",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C05": {
+      "source": "traces-C.csv",
+      "csv_record": 5,
+      "date_utc": "2026-10-21 13:57:50",
+      "value": "38480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C06": {
+      "source": "traces-C.csv",
+      "csv_record": 6,
+      "date_utc": "2026-10-21 13:57:55",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C07": {
+      "source": "traces-C.csv",
+      "csv_record": 7,
+      "date_utc": "2026-10-21 13:57:59",
+      "value": "13970",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C08": {
+      "source": "traces-C.csv",
+      "csv_record": 8,
+      "date_utc": "2026-10-21 13:58:04",
+      "value": "0",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C09": {
+      "source": "traces-C.csv",
+      "csv_record": 9,
+      "date_utc": "2026-10-21 13:58:09",
+      "value": "0",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C10": {
+      "source": "traces-C.csv",
+      "csv_record": 10,
+      "date_utc": "2026-10-21 13:58:14",
+      "value": "548920",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C11": {
+      "source": "traces-C.csv",
+      "csv_record": 11,
+      "date_utc": "2026-10-21 13:58:18",
+      "value": "0",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C12": {
+      "source": "traces-C.csv",
+      "csv_record": 12,
+      "date_utc": "2026-10-21 13:58:22",
+      "value": "1666490",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C13": {
+      "source": "traces-C.csv",
+      "csv_record": 13,
+      "date_utc": "2026-10-21 13:58:26",
+      "value": "107740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C14": {
+      "source": "traces-C.csv",
+      "csv_record": 14,
+      "date_utc": "2026-10-21 13:58:30",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C15": {
+      "source": "traces-C.csv",
+      "csv_record": 15,
+      "date_utc": "2026-10-21 13:58:35",
+      "value": "168680",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C16": {
+      "source": "traces-C.csv",
+      "csv_record": 16,
+      "date_utc": "2026-10-21 13:58:44",
+      "value": "376740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C17": {
+      "source": "traces-C.csv",
+      "csv_record": 17,
+      "date_utc": "2026-10-21 13:58:49",
+      "value": "105840",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C18": {
+      "source": "traces-C.csv",
+      "csv_record": 18,
+      "date_utc": "2026-10-21 13:58:54",
+      "value": "62480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C19": {
+      "source": "traces-C.csv",
+      "csv_record": 19,
+      "date_utc": "2026-10-21 13:58:59",
+      "value": "1990",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "C:C20": {
+      "source": "traces-C.csv",
+      "csv_record": 20,
+      "date_utc": "2026-10-21 13:59:03",
+      "value": "1106090",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C01": {
+      "source": "traces-D.csv",
+      "csv_record": 1,
+      "date_utc": "2026-10-21 13:32:26",
+      "value": "792800",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C02": {
+      "source": "traces-D.csv",
+      "csv_record": 2,
+      "date_utc": "2026-10-21 13:32:30",
+      "value": "590320",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C03": {
+      "source": "traces-D.csv",
+      "csv_record": 3,
+      "date_utc": "2026-10-21 13:32:33",
+      "value": "936350",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C04": {
+      "source": "traces-D.csv",
+      "csv_record": 4,
+      "date_utc": "2026-10-21 13:32:37",
+      "value": "2826250",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C05": {
+      "source": "traces-D.csv",
+      "csv_record": 5,
+      "date_utc": "2026-10-21 13:32:40",
+      "value": "38480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C06": {
+      "source": "traces-D.csv",
+      "csv_record": 6,
+      "date_utc": "2026-10-21 13:32:43",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C07": {
+      "source": "traces-D.csv",
+      "csv_record": 7,
+      "date_utc": "2026-10-21 13:32:47",
+      "value": "13970",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C08": {
+      "source": "traces-D.csv",
+      "csv_record": 8,
+      "date_utc": "2026-10-21 13:32:50",
+      "value": "605580",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C09": {
+      "source": "traces-D.csv",
+      "csv_record": 9,
+      "date_utc": "2026-10-21 13:32:53",
+      "value": "487980",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C10": {
+      "source": "traces-D.csv",
+      "csv_record": 10,
+      "date_utc": "2026-10-21 13:32:57",
+      "value": "558980",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C11": {
+      "source": "traces-D.csv",
+      "csv_record": 11,
+      "date_utc": "2026-10-21 13:33:00",
+      "value": "446690",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C12": {
+      "source": "traces-D.csv",
+      "csv_record": 12,
+      "date_utc": "2026-10-21 13:33:04",
+      "value": "1666490",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C13": {
+      "source": "traces-D.csv",
+      "csv_record": 13,
+      "date_utc": "2026-10-21 13:33:07",
+      "value": "107740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C14": {
+      "source": "traces-D.csv",
+      "csv_record": 14,
+      "date_utc": "2026-10-21 13:33:10",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C15": {
+      "source": "traces-D.csv",
+      "csv_record": 15,
+      "date_utc": "2026-10-21 13:33:14",
+      "value": "0",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C16": {
+      "source": "traces-D.csv",
+      "csv_record": 17,
+      "date_utc": "2026-10-21 13:33:22",
+      "value": "",
+      "verdict": "not_executed",
+      "http_status": "429",
+      "error": "HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m58jchmdeqdappz72624r04n` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 866, Requested 186. Pleas"
+    },
+    "D:C17": {
+      "source": "traces-D.csv",
+      "csv_record": 19,
+      "date_utc": "2026-10-21 13:33:29",
+      "value": "248490",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C18": {
+      "source": "traces-D.csv",
+      "csv_record": 21,
+      "date_utc": "2026-10-21 13:33:36",
+      "value": "",
+      "verdict": "not_executed",
+      "http_status": "429",
+      "error": "HTTP 429: Rate limit reached for model `qwen/qwen3.8-27b` in organization `org_01m58jchmdeqdappz72624r04n` service tier `on_demand` on output tokens per minute (OTPM): Limit 1000, Used 866, Requested 233. Pleas"
+    },
+    "D:C19": {
+      "source": "traces-D.csv",
+      "csv_record": 23,
+      "date_utc": "2026-10-21 13:33:43",
+      "value": "83580",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "D:C20": {
+      "source": "traces-D.csv",
+      "csv_record": 25,
+      "date_utc": "2026-10-21 13:33:55",
+      "value": "1106090",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C01": {
+      "source": "traces-E.csv",
+      "csv_record": 1,
+      "date_utc": "2026-10-21 14:05:26",
+      "value": "792800",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C02": {
+      "source": "traces-E.csv",
+      "csv_record": 2,
+      "date_utc": "2026-10-21 14:05:32",
+      "value": "590320",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C03": {
+      "source": "traces-E.csv",
+      "csv_record": 3,
+      "date_utc": "2026-10-21 14:05:37",
+      "value": "936350",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C04": {
+      "source": "traces-E.csv",
+      "csv_record": 4,
+      "date_utc": "2026-10-21 14:05:43",
+      "value": "2826250",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C05": {
+      "source": "traces-E.csv",
+      "csv_record": 5,
+      "date_utc": "2026-10-21 14:05:49",
+      "value": "38480",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C06": {
+      "source": "traces-E.csv",
+      "csv_record": 6,
+      "date_utc": "2026-10-21 14:05:54",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C07": {
+      "source": "traces-E.csv",
+      "csv_record": 7,
+      "date_utc": "2026-10-21 14:05:59",
+      "value": "13970",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C08": {
+      "source": "traces-E.csv",
+      "csv_record": 8,
+      "date_utc": "2026-10-21 14:06:07",
+      "value": "605580",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C09": {
+      "source": "traces-E.csv",
+      "csv_record": 9,
+      "date_utc": "2026-10-21 14:06:15",
+      "value": "134660",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C10": {
+      "source": "traces-E.csv",
+      "csv_record": 10,
+      "date_utc": "2026-10-21 14:06:21",
+      "value": "558980",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C11": {
+      "source": "traces-E.csv",
+      "csv_record": 11,
+      "date_utc": "2026-10-21 14:06:27",
+      "value": "446690",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C12": {
+      "source": "traces-E.csv",
+      "csv_record": 12,
+      "date_utc": "2026-10-21 14:06:35",
+      "value": "1666490",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C13": {
+      "source": "traces-E.csv",
+      "csv_record": 13,
+      "date_utc": "2026-10-21 14:06:41",
+      "value": "107740",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C14": {
+      "source": "traces-E.csv",
+      "csv_record": 14,
+      "date_utc": "2026-10-21 14:06:46",
+      "value": "0",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C15": {
+      "source": "traces-E.csv",
+      "csv_record": 15,
+      "date_utc": "2026-10-21 14:06:54",
+      "value": "138920",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C16": {
+      "source": "traces-E.csv",
+      "csv_record": 16,
+      "date_utc": "2026-10-21 14:07:01",
+      "value": "211260",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C17": {
+      "source": "traces-E.csv",
+      "csv_record": 17,
+      "date_utc": "2026-10-21 14:07:08",
+      "value": "152730",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C18": {
+      "source": "traces-E.csv",
+      "csv_record": 18,
+      "date_utc": "2026-10-21 14:07:15",
+      "value": "39580",
+      "verdict": "incorrect",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C19": {
+      "source": "traces-E.csv",
+      "csv_record": 19,
+      "date_utc": "2026-10-21 14:07:24",
+      "value": "",
+      "verdict": "sql_invalid",
+      "http_status": "200",
+      "error": ""
+    },
+    "E:C20": {
+      "source": "traces-E.csv",
+      "csv_record": 20,
+      "date_utc": "2026-10-21 14:07:29",
+      "value": "1106090",
+      "verdict": "correct",
+      "http_status": "200",
+      "error": ""
+    }
+  }
+}

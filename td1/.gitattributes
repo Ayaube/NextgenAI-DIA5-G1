@@ -1,0 +1,5 @@
+data/product.csv text eol=lf
+data/customers.csv text eol=lf
+data/orders.csv text eol=lf
+schema.sql text eol=lf
+# Preserve the distributed files' hashes on Windows checkouts.

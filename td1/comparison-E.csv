@@ -1,0 +1,21 @@
+case_id,model_id,trace_file,cell_id,nature,status,value_cents,reference_cents,explanation
+C01,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C01,real,correct,792800,792800,
+C02,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C02,real,correct,590320,590320,
+C03,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C03,real,correct,936350,936350,
+C04,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C04,real,correct,2826250,2826250,
+C05,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C05,real,correct,38480,38480,
+C06,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C06,real,correct,0,0,
+C07,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C07,real,correct,13970,13970,
+C08,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C08,real,correct,605580,605580,
+C09,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C09,real,incorrect,134660,487980,Age convention broken: SQL bounds birth_date between '2001-09-26' and '2026-09-26' and combines two contradictory month/day tests (<= and > compared to FALSE); it is not the completed age 25 on 2026-09-26 (birth_date > '2000-09-26' AND <= '2001-09-26'); value 134660 < reference 487980.
+C10,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C10,real,correct,558980,558980,
+C11,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C11,real,correct,446690,446690,
+C12,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C12,real,correct,1666490,1666490,
+C13,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C13,real,correct,107740,107740,
+C14,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C14,real,correct,0,0,
+C15,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C15,real,incorrect,138920,168680,"Age convention broken: SQL keeps year difference = 25 AND birthday already passed, so customers born in 2000 whose birthday falls after 09-25 (year difference 26, completed age 25) are excluded; value 138920 < reference 168680."
+C16,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C16,real,incorrect,211260,376740,"Age convention broken: SQL keeps year difference = 25 AND birthday already passed, so customers born in 2000 whose birthday falls after 09-25 (year difference 26, completed age 25) are excluded; value 211260 < reference 376740."
+C17,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C17,real,incorrect,152730,258180,"Age convention broken: year difference = 25 AND birth month/day <= 09-25 (hard-coded), so customers born in 2000 after 09-25 (completed age 25) are excluded; value 152730 < reference 258180."
+C18,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C18,real,incorrect,39580,62480,"Age-at-order convention broken: year difference (order year - birth year) = 25 AND birthday passed at the order date, so customers whose 26th-year birthday had not yet come at the order are excluded; value 39580 < reference 62480."
+C19,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C19,real,sql_invalid,,1990,"Invalid SQL, sandbox error 'near "")"": syntax error': second age block writes CAST(substr('2026-09-25', 1, 4) without AS INTEGER; the age logic also approximates years as 365 days and months as 30 days."
+C20,openrouter:dots-studio/dots-3-note-preview:free,traces-E.csv,openrouter:dots-studio/dots-3-note-preview:free:C20,real,correct,1106090,1106090,

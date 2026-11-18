@@ -75,4 +75,8 @@ For "if unavailable", use the order of lecture 2: capacity already paid for (sub
 
 ## 5. Priority order in `choose`
 
-*To write.* The question: why does an immediately available subscription (`cash == 0`, `allocation > 0`) come **before** deferring to wait for an exhausted free resource (`cash == 0`, `allocation == 0`) whose refill falls before `deadline_minutes`? Under what operational condition should this priority be reversed?
+An eligible subscription that is available now takes priority over waiting for a free quota refill. The subscription is already paid for (`cash == 0`), so the request can run immediately without an additional payment. It still consumes part of the subscription quota (`allocation > 0`).
+
+We reverse this priority when the remaining subscription quota is reserved for higher-priority requests and the current request can wait. We defer only if the expected refill leaves enough time to run the request and complete its required checks before the deadline. At wake-up, we check availability again.
+
+The original simulator includes a subscription resource. Our adapted portfolio contains five free routes and one pay-per-token route, so the subscription priority applies only if an eligible subscription is added.

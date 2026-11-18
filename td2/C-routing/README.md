@@ -10,7 +10,7 @@ Source data: `traces-td1.csv` (merged TD 1 traces, last **real** attempt per cel
 |---|---|
 | `taux_par_famille.py` | Recomputes the table below from the traces: `python td2/C-routing/taux_par_famille.py` (from the repository root) |
 | `simulateur-avant.txt` | Output of the supplied `atelier-routage.py`, seven scenarios, **before** adaptation (`nature = simulation`) |
-| `simulateur-apres.txt` | *To do*: output after adapting `RESOURCES` and `choose` |
+| `simulateur-apres.txt` | Output of the adapted routing simulator for all seven scenarios (`nature = simulation`). |
 | `review-1.md`, `review-2.md` | Cross-review by the other pairs |
 
 ## 1. Exact TD 1 rates per family
@@ -71,7 +71,7 @@ For "if unavailable", use the order of lecture 2: capacity already paid for (sub
 ## 4. Simulator
 
 - **Before adaptation:** `simulateur-avant.txt`. The supplied fictitious resources are `small-free` (level 1), `senior-subscription` (level 3, `cash 0`, `allocation 0.04`) and `senior-api` (level 3, `cash 0.30`). Decisions: simple → `small-free`; complex → `senior-subscription`; deferrable → `defer` 60 min; urgent → `senior-api`; budget exhausted → `abstain`; high impact → subscription + "source verification and human review"; unknown capability (level 4) → `abstain`.
-- **After adaptation:** *to do.* Replace `RESOURCES` with the portfolio models, an eligibility level per family derived from the table in section 1, and their price. Cite the justifying TD 1 cells in the `reason` string of every decision. Then save the output to `simulateur-apres.txt`.
+-  **After adaptation:** See `simulateur-apres.txt`. The simple F1 request selects GPT-OSS 20B on Groq Free. The complex F4 request selects GPT-OSS 120B on Groq Free. When both eligible free routes are unavailable, a deferrable request waits 60 minutes and rechecks availability. An urgent request uses GPT-OSS 120B on OpenRouter at an estimated USD 0.000285 per call, assuming 1,500 input tokens and 100 output tokens. With no budget, the simulator abstains. For a payout, it selects 120B and requires an exact match with an independent SQL reference before release. For an unknown family, it abstains because there is no TD1 evidence.
 
 ## 5. Priority order in `choose`
 

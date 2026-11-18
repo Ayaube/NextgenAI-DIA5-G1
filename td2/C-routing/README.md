@@ -55,7 +55,7 @@ All five cost 0 on the free routes used. What differs is the **quota** (Groq Fre
 | F2 completed age at a date | C02, C08, C09, C11 | 120b, qwen | | | | | |
 | F2b age at the order | C10 | 120b, 20b, qwen, dots | | | | | |
 | F3 product list | C03, C12, C13, C14 | all five | | | | | |
-| F4 combinations | C15 to C19 | 120b, 20b | | | | | |
+| F4 combinations | C15–C19 | 120b and 20b (5/5 each) | GPT-OSS 120B via Groq Free | Use 120B alone. Display the result if the SQL query runs and returns an integer amount in cents. | Require a 2-of-3 vote with GPT-OSS 120B, Cohere and Qwen. Display the amount only if two models agree to the cent. | Compare with an independently validated SQL reference. Release payment only on an exact match in cents. | Use eligible prepaid capacity if available, then try GPT-OSS 20B via Groq Free (5/5). Keep the same checks, with 20B replacing 120B in the vote. If no free route is available, wait for quota refill if the deadline allows. Otherwise use paid 120B via OpenRouter within budget, or abstain and request review. |
 
 For "if unavailable", use the order of lecture 2: capacity already paid for (subscription) → free model up to the request → **wait for the refill if the request can wait** → paid route within the budget → **abstention** or a person.
 

@@ -1,14 +1,18 @@
-# Pair A — quorum
+# A : le vote k sur n
 
-Partie réalisée : vote_k_sur_n, quatre exemples synthétiques et comparaison des vingt questions entre les quorums 2/3 et 3/5.
+La méthode vote_k_sur_n est complétée dans skeleton-multi-llm-en.py. Une valeur n'est gardée que si elle atteint k voix. Une erreur ou une indisponibilité reste dans n sans voter, et un doublon de modèle est refusé. Sans majorité, la méthode s'abstient.
 
-[Rapport et tableaux](reports/td2.md) · [CSV](comparaison-quorums.csv)
+Sur nos traces, le panel 2 sur 3 et le quorum 3 sur 5 prennent la même décision sur les vingt questions : dix-neuf valeurs justes et une abstention sur C17.
 
-Depuis la racine du dépôt :
+- [rapport-A.md](rapport-A.md) : la méthode, les quatre exemples synthétiques et le tableau des vingt questions.
+- [comparaison-quorums.csv](comparaison-quorums.csv) : le même tableau en CSV.
+- [tests.txt](tests.txt) : la sortie des tests.
 
-```powershell
-.\.venv\Scripts\python.exe td2\A-quorum\comparaison_quorums.py
-.\.venv\Scripts\python.exe td2\A-quorum\test_vote.py
+Pour rejouer, depuis la racine du dépôt :
+
+```
+python3 td2/A-quorum/test_vote.py
+python3 td2/A-quorum/comparaison_quorums.py
 ```
 
-Les copies des traces et références utilisées sont conservées ici pour reproduire les résultats. Le TD1 complet est dans ../../td1/. Aucun appel API.
+Le second script régénère le rapport et le CSV. Les copies des traces et de la référence utilisées sont gardées dans ce dossier.

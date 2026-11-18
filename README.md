@@ -1,8 +1,14 @@
 # NextgenAI-DIA5-G1
 
-- [TD1 : travail antérieur et ressources](td1/README.md)
-- [TD2 : organisation des binômes](td2/README.md)
+Dépôt du sous-groupe DIA5-G1 pour le module Trustworthy Generative AI de l'ESILV, du TD 1 au TD 3.
 
-Seule la partie A du TD2 est réalisée. Les parties B et C restent à compléter par les autres binômes.
+Membres : Ayoub LAMCHICHI, Maxence Tessier, Jérémie LEROY-DUBIEF, RASAKARAN Sharusan, Aurélien Guillout-Lacomblez, Aurelien Roche, hechmi Chemli.
 
-Le contenu antérieur a été restauré depuis GitHub, avec conservation de la modification locale de C19. Aucun push effectué.
+## Organisation
+
+- [td1](td1/README.md) : le kit, la base boutique, nos vingt requêtes de référence et les traces des cinq modèles.
+- [td2](td2/README.md) : le vote k sur n, le faux consensus et la règle de routage, une partie par binôme.
+- [td3](td3/README.md) : à venir.
+- [reports](reports) : un rapport par séance, [td1](reports/td1.md), [td2](reports/td2.md) et [td3](reports/td3.md).
+
+Aucun script du TD 2 n'appelle un fournisseur. Tout est rejoué à partir des traces enregistrées au TD 1.

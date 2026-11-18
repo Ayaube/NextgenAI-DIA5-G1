@@ -171,7 +171,7 @@ Consigne finale `2026-11-18-students-5`, 18 novembre 2026. Contribution **Pair A
 
 ## 1. Méthode `vote_k_sur_n`
 
-Implémentation dans [skeleton-multi-llm-en.py](../skeleton-multi-llm-en.py), méthode `Orchestrateur.vote_k_sur_n`. Le reste du squelette TD1 est conservé.
+Implémentation dans [skeleton-multi-llm-en.py](skeleton-multi-llm-en.py), méthode `Orchestrateur.vote_k_sur_n`. Le reste du squelette TD1 est conservé.
 
 `n` compte tous les membres, y compris les erreurs et indisponibilités. Le code refuse un seuil non entier ou hors de `n // 2 < k <= n`, ainsi qu'un doublon `(provider, model_requested)`. Il compte les valeurs entières des propositions `executed` uniquement. Dès qu'une valeur atteint k voix, il renvoie cette valeur et les modèles qui la soutiennent. Sinon il s'abstient, conserve le plus grand nombre de voix observé et renvoie `value=None`, `models=[]`. La valeur 0 est un vote valide.
 
@@ -179,24 +179,24 @@ La référence n'entre jamais dans le vote : `correct` et `incorrect` deviennent
 
 ## 2. Quatre exemples synthétiques exécutés
 
-Commande : `python atelier-vote.py`. Sortie brute : [vote-synthetic.jsonl](../vote-synthetic.jsonl). Ces exemples ne sont pas des résultats réels sur la boutique.
+Commande : `python atelier-vote.py`. Sortie brute : [vote-synthetic.jsonl](vote-synthetic.jsonl). Ces exemples ne sont pas des résultats réels sur la boutique.
 
 {synthetic_table}
 Le cas « wrong consensus » montre pourquoi l'accord n'est pas une preuve de justesse. L'analyse SQL détaillée relève de Pair B.
 
 ## 3. Données et sélection des tentatives
 
-- A : Groq / `openai/gpt-oss-120b`, [trace_A.csv](../trace_A.csv).
-- B : Groq / `openai/gpt-oss-20b`, [traces-B.csv](../traces-B.csv).
-- C : OpenRouter / `cohere/north-mini-code:free`, [traces-C.csv](../traces-C.csv).
-- D : Groq / `qwen/qwen3.8-27b`, [traces-D.csv](../traces-D.csv).
-- E : OpenRouter / `dots-studio/dots-3-note-preview:free`, [copie locale traces-E.csv](../traces-E.csv), récupérée dans [le commit GitHub source](https://github.com/Ayaube/NextgenAI-DIA5-G1/blob/{GITHUB_COMMIT}/traces-E.csv).
+- A : Groq / `openai/gpt-oss-120b`, [trace_A.csv](trace_A.csv).
+- B : Groq / `openai/gpt-oss-20b`, [traces-B.csv](traces-B.csv).
+- C : OpenRouter / `cohere/north-mini-code:free`, [traces-C.csv](traces-C.csv).
+- D : Groq / `qwen/qwen3.8-27b`, [traces-D.csv](traces-D.csv).
+- E : OpenRouter / `dots-studio/dots-3-note-preview:free`, [copie locale traces-E.csv](traces-E.csv), récupérée dans [le commit GitHub source](https://github.com/Ayaube/NextgenAI-DIA5-G1/blob/{GITHUB_COMMIT}/traces-E.csv).
 
 105 lignes originales, dont 25 pour D, réduites à **100 cellules : 5 modèles × 20 questions** en gardant la dernière tentative par fournisseur/modèle/question. Tri chronologique stable : à date identique, l'ordre du CSV départage les tentatives. Aucun retour à une ancienne tentative réussie après un échec. Les exports A/B/C/D de GitHub sont identiques aux fichiers locaux ; les 20 références numériques et les hashes de prompts concordent pour les cinq modèles.
 
 Le panel 2/3 est **A+C+D** ; le quorum 3/5 est **A+B+C+D+E**. B et A partagent la famille GPT-OSS : cinq modèles ne signifient pas cinq sources d'erreur indépendantes. Aucun nouvel appel API, aucune modification des prompts, aucune réouverture du TD1.
 
-Référence : [reference-td1.csv](../reference-td1.csv). [Traces fusionnées](../traces-td1-merged.csv). [Provenance des 100 cellules](../provenance.json) : fichier, numéro d'enregistrement CSV (hors en-tête, pas numéro de ligne physique), date, valeur, verdict, statut HTTP et erreur.
+Référence : [reference-td1.csv](reference-td1.csv). [Traces fusionnées](traces-td1-merged.csv). [Provenance des 100 cellules](provenance.json) : fichier, numéro d'enregistrement CSV (hors en-tête, pas numéro de ligne physique), date, valeur, verdict, statut HTTP et erreur.
 
 ## 4. Comparaison commentée des vingt questions
 
@@ -230,12 +230,11 @@ Depuis td2/A-quorum, avec Python standard, sans clé API :
 ..\\..\\.venv\\Scripts\\python.exe atelier-vote.py --traces traces-td1-merged.csv --case C02
 ```
 
-Le script produit ce rapport, le [CSV comparatif](../comparaison-quorums.csv), les traces fusionnées, leur provenance et les quatre exemples. Les tests vérifient notamment les seuils, doublons, indisponibilités, zéros, votes incorrects et les 2/3 et 3/5 sur toutes les combinaisons de quatre valeurs possibles. Sortie : [tests.txt](../tests.txt).
+Le script produit ce rapport, le [CSV comparatif](comparaison-quorums.csv), les traces fusionnées, leur provenance et les quatre exemples. Les tests vérifient notamment les seuils, doublons, indisponibilités, zéros, votes incorrects et les 2/3 et 3/5 sur toutes les combinaisons de quatre valeurs possibles. Sortie : [tests.txt](tests.txt).
 
 Contribution préparée avec assistance de Codex : implémentation, exécution hors ligne, comparaison et explications. Membres de Pair A : **à compléter**. À relire et expliquer à Pair B/C lors de la revue croisée. Le rapport collectif intégrera leurs travaux séparément ; ils ne sont pas réalisés dans cette contribution. Aucun commit, push ou dépôt Moodle effectué.
 """
-    (ROOT / "reports").mkdir(exist_ok=True)
-    (ROOT / "reports/td2.md").write_text(report, encoding="utf-8")
+    (ROOT / "rapport-A.md").write_text(report, encoding="utf-8")
     print(json.dumps({"cells": len(latest), "source_rows": len(records), "results": summary, "changed_decisions": changes}, ensure_ascii=False))
 
 

@@ -1,18 +1,18 @@
 # TD 2 - Pair B : le wrong consensus (Step 2)
 
 Section de la Pair B pour `reports/td2.md` (à recopier dans le rapport commun au moment de l'assemblage).
-Tous les chiffres ci-dessous viennent de scripts du dossier `B-consensus/`, à lancer depuis la racine du repo.
+Tous les chiffres ci-dessous viennent de scripts du dossier `td2/B-consensus/`, à lancer depuis la racine du repo.
 
 | Fichier | Rôle |
 |---|---|
-| `B-consensus/01_valeurs_fausses_partagees.py` | cherche les valeurs fausses partagées dans `B-consensus/traces-td1.csv` |
-| `B-consensus/03_c11_demo.py` | DEMO-VOTE, M1, M2, requête delta, vérification indépendante |
-| `B-consensus/04_quorum_pairB.py` | comptage des votes 2-sur-3 et 3-sur-5 |
-| `B-consensus/sql/*.sql` | toutes les requêtes SQL utilisées |
+| `td2/B-consensus/01_valeurs_fausses_partagees.py` | cherche les valeurs fausses partagées dans `td2/B-consensus/traces-td1.csv` |
+| `td2/B-consensus/03_c11_demo.py` | DEMO-VOTE, M1, M2, requête delta, vérification indépendante |
+| `td2/B-consensus/04_quorum_pairB.py` | comptage des votes 2-sur-3 et 3-sur-5 |
+| `td2/B-consensus/sql/*.sql` | toutes les requêtes SQL utilisées |
 
 ## 1. Recherche dans nos 100 cellules
 
-`B-consensus/traces-td1.csv` contient 105 lignes : 5 lignes en trop sont des tentatives de Qwen rejouées après un HTTP 429 (colonne `attempts`).
+`td2/B-consensus/traces-td1.csv` contient 105 lignes : 5 lignes en trop sont des tentatives de Qwen rejouées après un HTTP 429 (colonne `attempts`).
 En gardant la dernière tentative de chaque couple (modèle, question), on obtient bien 100 cellules :
 82 `correct`, 14 `incorrect`, 2 `sql_invalid` (North C02, Dots C19), 2 `not_executed` (Qwen C16 et C18, toujours en 429).
 
@@ -126,7 +126,7 @@ qu'un `correct` dans le tableau ne prouve pas que la requête est bonne sur une 
 
 ## 4. Requête delta sur `data/boutique.sqlite`
 
-Fichiers : `B-consensus/sql/c11_delta_detail.sql` et `B-consensus/sql/c11_delta_total.sql`. Elles listent exactement les lignes de commande
+Fichiers : `td2/B-consensus/sql/c11_delta_detail.sql` et `td2/B-consensus/sql/c11_delta_total.sql`. Elles listent exactement les lignes de commande
 comptées par la référence (fenêtre `]2000-12-01 ; 2001-12-01]`) et rejetées par M1 et par M2 (colonnes `gardee_par_M1` et `gardee_par_M2` : 0 sur toutes les lignes).
 
 ```sql

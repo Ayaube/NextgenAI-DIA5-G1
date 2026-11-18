@@ -1,7 +1,12 @@
 # Pair B - comptage des votes (version simple, faite pour verifier la methode vote_k_sur_n de Pair A)
-# Usage (depuis la racine du repo) : python3 B-consensus/04_quorum_pairB.py
+# Usage : python3 td2/B-consensus/04_quorum_pairB.py
 import csv
 from collections import Counter
+import os
+
+# chemins calcules depuis ce fichier : le script marche depuis n'importe quel dossier
+ICI = os.path.dirname(os.path.abspath(__file__))
+TD1 = os.path.join(ICI, "..", "..", "td1")
 
 PANEL_3 = ["openai/gpt-oss-120b", "cohere/north-mini-code:free", "qwen/qwen3.8-27b"]
 PANEL_5 = PANEL_3 + ["openai/gpt-oss-20b", "dots-studio/dots-3-note-preview:free"]
@@ -26,7 +31,7 @@ def vote(propositions, k):
 
 # ---- on lit les traces : derniere tentative de chaque (modele, question) ----
 cellules = {}
-for l in csv.DictReader(open("B-consensus/traces-td1.csv", encoding="utf-8")):
+for l in csv.DictReader(open(os.path.join(ICI, "traces-td1.csv"), encoding="utf-8")):
     cellules[(l["model_requested"], l["case_id"])] = l
 
 def propositions(case, modeles):
@@ -40,7 +45,7 @@ def propositions(case, modeles):
     return res
 
 ref = {}
-for r in csv.DictReader(open("reference-td1.csv", encoding="utf-8")):
+for r in csv.DictReader(open(os.path.join(TD1, "reference-td1.csv"), encoding="utf-8")):
     ref[r["case_id"]] = int(r["revenue_cents"])
 
 # ---- 1. C11 sur NOS traces reelles ----

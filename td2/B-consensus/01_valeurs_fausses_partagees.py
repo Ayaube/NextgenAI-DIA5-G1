@@ -1,9 +1,14 @@
 # Pair B - etape 1 : chercher dans traces-td1.csv les valeurs fausses partagees
-# Usage : python3 B-consensus/01_valeurs_fausses_partagees.py
+# Usage : python3 td2/B-consensus/01_valeurs_fausses_partagees.py
 import csv
 from collections import defaultdict
+import os
 
-lignes = list(csv.DictReader(open("B-consensus/traces-td1.csv", encoding="utf-8")))
+# chemins calcules depuis ce fichier : le script marche depuis n'importe quel dossier
+ICI = os.path.dirname(os.path.abspath(__file__))
+TD1 = os.path.join(ICI, "..", "..", "td1")
+
+lignes = list(csv.DictReader(open(os.path.join(ICI, "traces-td1.csv"), encoding="utf-8")))
 print("nombre de lignes dans le fichier :", len(lignes))
 
 # Il y a plus de 100 lignes car un HTTP 429 a ete reessaye (colonne attempts).

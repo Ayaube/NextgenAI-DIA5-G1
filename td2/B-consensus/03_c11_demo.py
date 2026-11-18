@@ -1,14 +1,19 @@
 # Pair B - etape 2 : cas DEMO-SQL-C11 + DEMO-VOTE, sur data/boutique.sqlite
-# Usage (depuis la racine du repo) : python3 B-consensus/03_c11_demo.py
+# Usage : python3 td2/B-consensus/03_c11_demo.py
 import sqlite3
 import csv
 from datetime import date
+import os
+
+# chemins calcules depuis ce fichier : le script marche depuis n'importe quel dossier
+ICI = os.path.dirname(os.path.abspath(__file__))
+TD1 = os.path.join(ICI, "..", "..", "td1")
 
 def lire_sql(nom):
-    return open("B-consensus/sql/" + nom, encoding="utf-8").read()
+    return open(os.path.join(ICI, "sql", nom), encoding="utf-8").read()
 
 # base ouverte en lecture seule
-con = sqlite3.connect("file:data/boutique.sqlite?mode=ro", uri=True)
+con = sqlite3.connect("file:" + os.path.join(TD1, "data", "boutique.sqlite") + "?mode=ro", uri=True)
 
 # ---------- 1. DEMO-VOTE : table jouet ----------
 print("=== DEMO-VOTE (table jouet) ===")
@@ -71,7 +76,7 @@ print("TOTAL manquant :", somme, "| reference :", ref, "| ok :", somme == ref)
 print()
 print("=== Verification independante (Python + CSV, sans SQL) ===")
 prix = {}
-for r in csv.DictReader(open("data/product.csv", encoding="utf-8")):
+for r in csv.DictReader(open(os.path.join(TD1, "data", "product.csv"), encoding="utf-8")):
     prix[r["product_id"]] = int(r["price"])
 
 def age_au(naissance, jour):
@@ -84,13 +89,13 @@ def age_au(naissance, jour):
 
 jour_ref = date(2026, 12, 1)
 clients_25 = set()
-for r in csv.DictReader(open("data/customers.csv", encoding="utf-8")):
+for r in csv.DictReader(open(os.path.join(TD1, "data", "customers.csv"), encoding="utf-8")):
     if age_au(r["birth_date"], jour_ref) == 25:
         clients_25.add(r["customer_id"])
 print("clients de 25 ans au 2026-12-01 :", len(clients_25))
 
 ca = 0
-for r in csv.DictReader(open("data/orders.csv", encoding="utf-8")):
+for r in csv.DictReader(open(os.path.join(TD1, "data", "orders.csv"), encoding="utf-8")):
     if r["customer_id"] in clients_25:
         ca = ca + int(r["quantity_product"]) * prix[r["product_id"]]
 print("CA calcule en Python :", ca, "| ok :", ca == ref)
